@@ -1,13 +1,13 @@
-🤖 Multilingual Emotion & Sarcasm Detection
+#🤖 Multilingual Emotion & Sarcasm Detection
 
 
-📖 Abstract
+##📖 Abstract
 
 Understanding human communication requires more than just literal text analysis. Emotions and sarcasm are crucial components of natural language but are challenging for machines to interpret, especially in multilingual settings.
 
 This project presents a Streamlit-based interactive system that integrates fine-tuned transformer models (XLM-RoBERTa) for multilingual emotion classification and sarcasm detection. The system supports real-time inference, as well as bulk analysis of WhatsApp/Telegram chats, with results visualized through analytics dashboards.
 
-🧩 Motivation
+##🧩 Motivation
 
 Ambiguity in Language
 
@@ -23,7 +23,7 @@ Existing emotion/sarcasm systems are often restricted to English.
 
 Our approach leverages XLM-RoBERTa for cross-lingual generalization.
 
-🎯 Objectives
+##🎯 Objectives
 
 Build a robust emotion classifier capable of detecting six emotions: Joy, Love, Anger, Fear, Sadness, Surprise.
 
@@ -33,7 +33,7 @@ Provide a user-friendly interface for both single-message predictions and chat-l
 
 Demonstrate the effectiveness of transfer learning using pre-trained multilingual transformers.
 
-📚 Related Work
+##📚 Related Work
 
 Emotion Detection
 
@@ -47,7 +47,7 @@ Prior research highlights sarcasm as context-heavy, often requiring multimodal s
 
 This project focuses on text-based sarcasm detection using TweetEval - Irony Dataset.
 
-Applications
+##Applications
 
 Sentiment analysis
 
@@ -82,7 +82,7 @@ Social media moderation
              └───────────────────────────────────┘
 
 
-⚙️ Methodology
+##⚙️ Methodology
 1. Datasets
 
 Emotion Classification → HuggingFace Emotion Dataset
@@ -91,7 +91,7 @@ Emotion Classification → HuggingFace Emotion Dataset
 Sarcasm Detection → TweetEval - Irony Dataset
  (binary).
 
-2. Model Architecture
+##2. Model Architecture
 
 Base Model: xlm-roberta-base
 
@@ -107,7 +107,7 @@ Learning rate: 2e-5
 
 Epochs: 2–3
 
-3. Training Pipeline
+##3. Training Pipeline
 
 Tokenization with XLMRobertaTokenizer
 
@@ -117,13 +117,13 @@ CrossEntropy loss optimization
 
 Evaluation via Accuracy & Weighted F1
 
-4. Deployment
+##4. Deployment
 
 Frontend: Streamlit UI
 
 Backend: Fine-tuned XLM-R models
 
-Features:
+##Features:
 
 Real-time inference
 
@@ -131,20 +131,22 @@ Chat file uploader
 
 Analytics dashboards
 
-🔬 Experiments & Results
+##🔬 Experiments & Results
 📌 Emotion Model (6-class)
 Metric	Value
 Validation Accuracy	~90%
 Weighted F1 Score	~0.88
-📌 Sarcasm Model (Binary)
+##📌 Sarcasm Model (Binary)
 Metric	Value
 Validation Accuracy	~85%
 F1 Score	~0.82
 
 📊 Training curves:
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7f0e972b-0994-4a83-9b24-3736feb3c91d" />
 
 
-📊 Analytics
+
+##📊 Analytics
 
 Emotion Distribution → Bar charts of detected emotions.
 
@@ -152,7 +154,7 @@ Sarcasm Distribution → Ratio of sarcastic vs non-sarcastic text.
 
 Chat Insights → Long-term sentiment/sarcasm trends in conversations.
 
-📌 Limitations
+##📌 Limitations
 
 Text-only sarcasm detection (no tone/emoji/video context).
 
@@ -160,7 +162,7 @@ Training requires GPU resources.
 
 Fine-tuned mostly on Twitter data (domain-specific).
 
-🚧 Future Work
+##🚧 Future Work
 
 ✅ Incorporate multimodal sarcasm detection (emoji, audio, video cues).
 
@@ -170,7 +172,7 @@ Fine-tuned mostly on Twitter data (domain-specific).
 
 ✅ Integrate with live messaging apps.
 
-🧑‍💻 Tech Stack
+##🧑‍💻 Tech Stack
 
 Language: Python 3.10+
 
@@ -180,7 +182,7 @@ Models: HuggingFace Transformers (XLM-RoBERTa)
 
 Visualization: Matplotlib, Pandas
 
-📚 References
+#📚 References
 
 Conneau, A., et al. (2020). Unsupervised Cross-lingual Representation Learning at Scale. ACL.
 
