@@ -1,39 +1,42 @@
-#🤖 Multilingual Emotion & Sarcasm Detection
+🤖 Multilingual Emotion & Sarcasm Detection
+📖 ABSTRACT
 
+Understanding human communication requires more than just literal text analysis.
+Emotions and sarcasm are crucial components of natural language but are challenging for machines to interpret, especially in multilingual settings.
 
-##📖 Abstract
+This project presents a Streamlit-based interactive system that integrates fine-tuned transformer models (XLM-RoBERTa) for multilingual emotion classification and sarcasm detection.
 
-Understanding human communication requires more than just literal text analysis. Emotions and sarcasm are crucial components of natural language but are challenging for machines to interpret, especially in multilingual settings.
+Supports real-time inference
 
-This project presents a Streamlit-based interactive system that integrates fine-tuned transformer models (XLM-RoBERTa) for multilingual emotion classification and sarcasm detection. The system supports real-time inference, as well as bulk analysis of WhatsApp/Telegram chats, with results visualized through analytics dashboards.
+Allows bulk analysis of WhatsApp/Telegram chats
 
-##🧩 Motivation
+Provides visualized analytics dashboards
+
+🧩 MOTIVATION
 
 Ambiguity in Language
-
-Example: “Wow, great job 👏” can either be genuine praise or sarcasm depending on context.
+👉 Example: “Wow, great job 👏” can either be genuine praise or sarcasm depending on context.
 
 Social Media Complexity
-
-Platforms like WhatsApp, Twitter, and Telegram contain highly informal and emotionally nuanced text.
+👉 Platforms like WhatsApp, Twitter, and Telegram contain highly informal and emotionally nuanced text.
 
 Multilingual Challenge
+👉 Existing emotion/sarcasm systems are often restricted to English.
 
-Existing emotion/sarcasm systems are often restricted to English.
+Our Approach
+👉 Leverages XLM-RoBERTa for cross-lingual generalization.
 
-Our approach leverages XLM-RoBERTa for cross-lingual generalization.
-
-##🎯 Objectives
+🎯 OBJECTIVES
 
 Build a robust emotion classifier capable of detecting six emotions: Joy, Love, Anger, Fear, Sadness, Surprise.
 
 Develop a sarcasm detection model trained on irony datasets.
 
-Provide a user-friendly interface for both single-message predictions and chat-level analytics.
+Provide a user-friendly interface for single-message predictions & chat-level analytics.
 
-Demonstrate the effectiveness of transfer learning using pre-trained multilingual transformers.
+Demonstrate the power of transfer learning with multilingual transformers.
 
-##📚 Related Work
+📚 RELATED WORK
 
 Emotion Detection
 
@@ -43,19 +46,19 @@ Transformers like BERT and XLM-RoBERTa achieve state-of-the-art results.
 
 Sarcasm Detection
 
-Prior research highlights sarcasm as context-heavy, often requiring multimodal signals.
+Prior research shows sarcasm is context-heavy, often requiring multimodal signals.
 
-This project focuses on text-based sarcasm detection using TweetEval - Irony Dataset.
+Our project focuses on text-based sarcasm detection using TweetEval - Irony Dataset.
 
-##Applications
+🚀 APPLICATIONS
 
-Sentiment analysis
+Sentiment Analysis
 
-Mental health monitoring
+Mental Health Monitoring
 
 Conversational AI
 
-Social media moderation
+Social Media Moderation
 
 
                 ┌──────────────────────────┐
@@ -81,19 +84,16 @@ Social media moderation
              │ Streamlit Dashboard (UI + Graphs) │
              └───────────────────────────────────┘
 
+⚙️ METHODOLOGY
+1️⃣ Datasets
 
-##⚙️ Methodology
-1. Datasets
+Emotion Classification → HuggingFace Emotion Dataset (6-class)
 
-Emotion Classification → HuggingFace Emotion Dataset
- (6-class).
+Sarcasm Detection → TweetEval - Irony Dataset (binary)
 
-Sarcasm Detection → TweetEval - Irony Dataset
- (binary).
+2️⃣ Model Architecture
 
-##2. Model Architecture
-
-Base Model: xlm-roberta-base
+Base Model → xlm-roberta-base
 
 Fine-tuning Strategy:
 
@@ -107,83 +107,74 @@ Learning rate: 2e-5
 
 Epochs: 2–3
 
-##3. Training Pipeline
+3️⃣ Training Pipeline
 
 Tokenization with XLMRobertaTokenizer
 
 Data batching & shuffling
 
-CrossEntropy loss optimization
+Loss → CrossEntropy
 
-Evaluation via Accuracy & Weighted F1
+Evaluation → Accuracy & Weighted F1
 
-##4. Deployment
+4️⃣ Deployment
 
-Frontend: Streamlit UI
+Frontend → Streamlit UI
 
-Backend: Fine-tuned XLM-R models
+Backend → Fine-tuned XLM-R models
 
-##Features:
+Features:
+✅ Real-time inference
+✅ Chat file uploader
+✅ Analytics dashboards
 
-Real-time inference
-
-Chat file uploader
-
-Analytics dashboards
-
-##🔬 Experiments & Results
+🔬 EXPERIMENTS & RESULTS
 📌 Emotion Model (6-class)
 Metric	Value
 Validation Accuracy	~90%
 Weighted F1 Score	~0.88
-##📌 Sarcasm Model (Binary)
+📌 Sarcasm Model (Binary)
 Metric	Value
 Validation Accuracy	~85%
 F1 Score	~0.82
 
-📊 Training curves:
-<<img width="1200" height="400" alt="training_metrics" src="https://github.com/user-attachments/assets/20d5c6e1-e334-4742-8105-3cb85043ffeb" />
- />
+📊 Training Curves:
+<img width="1200" height="400" alt="training_metrics" src="https://github.com/user-attachments/assets/2e6de7ae-b7a0-4eeb-92d3-689b306f8fae" />
 
 
 
-##📊 Analytics
+📊 ANALYTICS
 
-Emotion Distribution → Bar charts of detected emotions.
+Emotion Distribution → Bar charts of detected emotions
 
-Sarcasm Distribution → Ratio of sarcastic vs non-sarcastic text.
+Sarcasm Distribution → Ratio of sarcastic vs non-sarcastic text
 
-Chat Insights → Long-term sentiment/sarcasm trends in conversations.
+Chat Insights → Long-term sentiment/sarcasm trends in conversations
 
-##📌 Limitations
+📌 LIMITATIONS
 
-Text-only sarcasm detection (no tone/emoji/video context).
+⚠️ Text-only sarcasm detection (no tone/emoji/video context)
+⚠️ Requires GPU resources for training
+⚠️ Fine-tuned mostly on Twitter data (domain-specific)
 
-Training requires GPU resources.
+🚧 FUTURE WORK
 
-Fine-tuned mostly on Twitter data (domain-specific).
+✅ Incorporate multimodal sarcasm detection (emoji, audio, video cues)
+✅ Add context-aware conversation modeling
+✅ Deploy on HuggingFace Spaces / Streamlit Cloud
+✅ Integrate with live messaging apps
 
-##🚧 Future Work
+🧑‍💻 TECH STACK
 
-✅ Incorporate multimodal sarcasm detection (emoji, audio, video cues).
+Language → Python 3.10+
 
-✅ Add context-aware conversation modeling.
+Framework → Streamlit
 
-✅ Deploy on HuggingFace Spaces / Streamlit Cloud.
+Models → HuggingFace Transformers (XLM-RoBERTa)
 
-✅ Integrate with live messaging apps.
+Visualization → Matplotlib, Pandas
 
-##🧑‍💻 Tech Stack
-
-Language: Python 3.10+
-
-Framework: Streamlit
-
-Models: HuggingFace Transformers (XLM-RoBERTa)
-
-Visualization: Matplotlib, Pandas
-
-#📚 References
+📚 REFERENCES
 
 Conneau, A., et al. (2020). Unsupervised Cross-lingual Representation Learning at Scale. ACL.
 
