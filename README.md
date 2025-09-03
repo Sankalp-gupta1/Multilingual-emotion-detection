@@ -142,7 +142,8 @@ Validation Accuracy	~85%
 F1 Score	~0.82
 
 📊 Training curves:
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7f0e972b-0994-4a83-9b24-3736feb3c91d" />
+<<img width="1200" height="400" alt="training_metrics" src="https://github.com/user-attachments/assets/20d5c6e1-e334-4742-8105-3cb85043ffeb" />
+ />
 
 
 
