@@ -153,18 +153,28 @@ Webcam frames are processed using OpenCV and CNN.
 Emotion predictions are generated.
 Results are synchronized across connected users.
 Dashboard displays real-time emotional analytics.
-Datasets Used
-Text Emotion Dataset
+<img width="1919" height="964" alt="Screenshot 2026-05-22 125053" src="https://github.com/user-attachments/assets/b091211f-a2c4-4404-b6e3-974ed4a6f7a6" />
+
+<img width="1919" height="964" alt="Screenshot 2026-05-22 125053" src="https://github.com/user-attachments/assets/d319fbb7-0475-4462-ae38-9624e3abe462" />
+
+<img width="1920" height="1080" alt="Screenshot (1807)" src="https://github.com/user-attachments/assets/ed651cae-45cd-42dc-9ca0-b14c73a22826" />
+
+<img width="856" height="574" alt="image" src="https://github.com/user-attachments/assets/f58ba51f-d791-48fb-9763-59a499912f69" />
+
+
+## Datasets Used
+
+# Text Emotion Dataset
 
 The multilingual emotion dataset was collected from publicly available Hugging Face resources and emotion classification datasets.
 
 # Sarcasm Dataset
 
-# Sarcasm detection data was collected from publicly available irony and sarcasm datasets.
+ Sarcasm detection data was collected from publicly available irony and sarcasm datasets.
 
 # Facial Emotion Dataset
 
-# Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
+ Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
 
 ### Model Training
 # NLP Model
