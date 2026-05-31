@@ -27,10 +27,6 @@ Instead of relying only on traditional dot-product based attention, the system u
 
 Example:
 
-```text
-
-I am happy
-Main khush hu
 
 Features
 Real-time multilingual text emotion detection
@@ -401,3 +397,10 @@ It provides a practical foundation for future intelligent communication systems 
 License
 
 This project is developed for academic and learning purposes.
+
+
+
+```text
+
+I am happy
+Main khush hu
