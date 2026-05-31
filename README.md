@@ -1,5 +1,5 @@
 ## Real-Time Multilingual Emotion Detection & Distributed Communication System
-Overview
+# Overview
 
 Modern communication platforms allow users to exchange messages and video streams, but they are unable to understand the emotional context behind conversations. A user may be happy, frustrated, stressed, sarcastic, or confused, yet traditional chat systems treat every message as plain text.
 
@@ -7,7 +7,7 @@ To address this limitation, we developed a real-time multilingual emotion detect
 
 The platform supports multiple connected users, real-time chat, facial emotion recognition through webcam input, sarcasm detection, and synchronized emotional analytics through an interactive dashboard.
 
-Problem Statement
+## Problem Statement
 
 Most existing communication systems focus only on message delivery and do not understand user emotions.
 
@@ -22,13 +22,13 @@ Lack of privacy-aware monitoring
 
 These limitations reduce the ability of communication platforms to understand human behavior and emotional context.
 
-Proposed Solution
+## Proposed Solution
 
 The proposed system integrates multilingual text emotion detection and facial emotion recognition into a single distributed platform.
 
 The system continuously analyzes user messages and facial expressions to generate emotional insights in real time. These predictions are synchronized across connected users and visualized through a live analytics dashboard.
 
-Key capabilities include:
+# Key capabilities include:
 
 Real-time multilingual emotion detection
 Sarcasm identification
@@ -52,7 +52,7 @@ For example:
 
 Although the words are different, both sentences express similar emotions. Cosine similarity helps bring such semantically related sentences closer during prediction.
 
-System Features
+## System Features
 Text Emotion Detection
 
 The NLP module analyzes user messages and predicts emotions such as:
@@ -74,7 +74,7 @@ Wow, great! I failed my exam.
 
 Although positive words are used, the actual emotional meaning is negative.
 
-Facial Emotion Recognition
+## Facial Emotion Recognition
 
 A CNN-based facial emotion recognition model processes webcam frames and predicts facial emotions in real time.
 
@@ -97,7 +97,7 @@ To prevent webcam conflicts, only one authenticated user is granted direct camer
 
 This approach improves both privacy and resource management.
 
-Real-Time Analytics Dashboard
+## Real-Time Analytics Dashboard
 
 The Streamlit dashboard continuously displays:
 
@@ -121,7 +121,7 @@ CNN	Facial emotion recognition
 OpenCV	Webcam processing
 JSON	Synchronization
 NumPy & Pandas	Data handling
-System Architecture
+### System Architecture
 Users
    │
    ▼
@@ -141,7 +141,7 @@ FastAPI Backend
 Synchronization Layer
    │
    ▼
-Live Analytics Dashboard
+## Live Analytics Dashboard
 Workflow
 Users connect through the distributed communication platform.
 Messages and webcam frames are received in real time.
@@ -155,28 +155,28 @@ Text Emotion Dataset
 
 The multilingual emotion dataset was collected from publicly available Hugging Face resources and emotion classification datasets.
 
-Sarcasm Dataset
+# Sarcasm Dataset
 
-Sarcasm detection data was collected from publicly available irony and sarcasm datasets.
+# Sarcasm detection data was collected from publicly available irony and sarcasm datasets.
 
-Facial Emotion Dataset
+# Facial Emotion Dataset
 
-Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
+# Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
 
-Model Training
-NLP Model
+### Model Training
+# NLP Model
 
 The text emotion module was developed using XLM-RoBERTa and trained on multilingual emotion datasets.
 
 The model was fine-tuned to identify emotional context from multilingual conversations and sarcasm-rich text.
 
-Facial Emotion Model
+## Facial Emotion Model
 
 The facial emotion recognition model was trained using CNN architecture on facial expression datasets.
 
 Images were preprocessed through resizing, normalization, and augmentation before training.
 
-Results
+## Results
 
 The system successfully performs:
 
@@ -188,7 +188,7 @@ Live emotional analytics
 
 The platform demonstrates stable performance in distributed communication environments and provides meaningful emotional insights during conversations.
 
-Applications
+## Applications
 
 This project can be used in:
 
@@ -201,7 +201,7 @@ AI-assisted communication systems
 Virtual meeting analytics
 Future Scope
 
-Future improvements may include:
+## Future improvements may include:
 
 Voice emotion recognition
 Speech tone analysis
@@ -221,7 +221,7 @@ Frontend Development, Dashboard Design, Synchronization
 Pranshu Yadav
 Facial Emotion Recognition, CNN Integration, Webcam Processing
 
-Conclusion
+## Conclusion
 
 This project presents a practical implementation of an emotion-aware distributed communication platform that combines Natural Language Processing and Computer Vision techniques.
 
