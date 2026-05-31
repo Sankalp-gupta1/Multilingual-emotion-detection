@@ -1,4 +1,4 @@
-### Real-Time Multilingual Emotion Detection & Distributed Communication System
+#### Real-Time Multilingual Emotion Detection & Distributed Communication System
 # Overview
 
 Modern communication platforms allow users to exchange messages and video streams, but they are unable to understand the emotional context behind conversations. A user may be happy, frustrated, stressed, sarcastic, or confused, yet traditional chat systems treat every message as plain text.
@@ -7,6 +7,7 @@ To address this limitation, we developed a real-time multilingual emotion detect
 
 The platform supports multiple connected users, real-time chat, facial emotion recognition through webcam input, sarcasm detection, and synchronized emotional analytics through an interactive dashboard.
 
+<img width="722" height="959" alt="image" src="https://github.com/user-attachments/assets/d9ac0ad5-08b5-45b7-91f0-1aa05b7d5a70" />
 
 
 ## Problem Statement
@@ -53,6 +54,10 @@ For example:
 "Main khush hu"
 
 Although the words are different, both sentences express similar emotions. Cosine similarity helps bring such semantically related sentences closer during prediction.
+
+
+<img width="1804" height="992" alt="image" src="https://github.com/user-attachments/assets/2df9175b-7e01-4501-bac6-a7a62d61fa70" />
+
 
 ## System Features
 Text Emotion Detection
@@ -146,6 +151,8 @@ FastAPI Backend
    ▼
 Live Analytics Dashboard
 ```
+<img width="856" height="574" alt="image" src="https://github.com/user-attachments/assets/f58ba51f-d791-48fb-9763-59a499912f69" />
+
 ## Live Analytics Dashboard
 Workflow
 Users connect through the distributed communication platform.
@@ -161,7 +168,7 @@ Dashboard displays real-time emotional analytics.
 
 <img width="1920" height="1080" alt="Screenshot (1807)" src="https://github.com/user-attachments/assets/ed651cae-45cd-42dc-9ca0-b14c73a22826" />
 
-<img width="856" height="574" alt="image" src="https://github.com/user-attachments/assets/f58ba51f-d791-48fb-9763-59a499912f69" />
+
 
 
 ## Datasets Used
@@ -177,7 +184,7 @@ The multilingual emotion dataset was collected from publicly available Hugging F
 # Facial Emotion Dataset
 
  Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
- ![Uploading image.png…]()
+ <img width="1137" height="1005" alt="image" src="https://github.com/user-attachments/assets/ad369e12-8a26-4356-a5db-ab0f956cd497" />
 
 
 ### Model Training
@@ -217,7 +224,9 @@ Emotion-aware chat platforms
 AI-assisted communication systems
 Virtual meeting analytics
 Future Scope
-![Uploading image.png…]()
+
+<img width="1990" height="996" alt="image" src="https://github.com/user-attachments/assets/ed22f5fe-9e0d-4caf-9ebd-2fde0178d2ac" />
+
 
 
 ## Future improvements may include:
@@ -230,7 +239,7 @@ Advanced emotional analytics
 Federated learning integration
 End-to-end encrypted communication
 Team Members
-![Uploading image.png…]()
+
 
 
 Sankalp Gupta
