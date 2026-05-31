@@ -245,7 +245,7 @@ Sankalp Gupta
 AI/ML Development, Transformer Modification, Backend Integration
 
 Suryansh Sharma
-Frontend Development, Dashboard Design, Synchronization
+AI/ML Development, Frontend Development, Dashboard Design, Synchronization
 
 Pranshu Yadav
 Facial Emotion Recognition, CNN Integration, Webcam Processing
