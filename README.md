@@ -1,4 +1,4 @@
-## Real-Time Multilingual Emotion Detection & Distributed Communication System
+### Real-Time Multilingual Emotion Detection & Distributed Communication System
 # Overview
 
 Modern communication platforms allow users to exchange messages and video streams, but they are unable to understand the emotional context behind conversations. A user may be happy, frustrated, stressed, sarcastic, or confused, yet traditional chat systems treat every message as plain text.
@@ -6,6 +6,8 @@ Modern communication platforms allow users to exchange messages and video stream
 To address this limitation, we developed a real-time multilingual emotion detection and distributed communication platform capable of analyzing both textual and facial emotions. The system combines Natural Language Processing (NLP), Computer Vision, and Deep Learning techniques to provide live emotional insights during communication.
 
 The platform supports multiple connected users, real-time chat, facial emotion recognition through webcam input, sarcasm detection, and synchronized emotional analytics through an interactive dashboard.
+
+
 
 ## Problem Statement
 
@@ -153,7 +155,7 @@ Webcam frames are processed using OpenCV and CNN.
 Emotion predictions are generated.
 Results are synchronized across connected users.
 Dashboard displays real-time emotional analytics.
-<img width="1919" height="964" alt="Screenshot 2026-05-22 125053" src="https://github.com/user-attachments/assets/b091211f-a2c4-4404-b6e3-974ed4a6f7a6" />
+
 
 <img width="1919" height="964" alt="Screenshot 2026-05-22 125053" src="https://github.com/user-attachments/assets/d319fbb7-0475-4462-ae38-9624e3abe462" />
 
@@ -175,6 +177,8 @@ The multilingual emotion dataset was collected from publicly available Hugging F
 # Facial Emotion Dataset
 
  Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
+ ![Uploading image.png…]()
+
 
 ### Model Training
 # NLP Model
@@ -213,6 +217,8 @@ Emotion-aware chat platforms
 AI-assisted communication systems
 Virtual meeting analytics
 Future Scope
+![Uploading image.png…]()
+
 
 ## Future improvements may include:
 
@@ -224,6 +230,8 @@ Advanced emotional analytics
 Federated learning integration
 End-to-end encrypted communication
 Team Members
+![Uploading image.png…]()
+
 
 Sankalp Gupta
 AI/ML Development, Transformer Modification, Backend Integration
@@ -239,3 +247,4 @@ Facial Emotion Recognition, CNN Integration, Webcam Processing
 This project presents a practical implementation of an emotion-aware distributed communication platform that combines Natural Language Processing and Computer Vision techniques.
 
 By integrating multilingual emotion detection, sarcasm recognition, facial emotion analysis, and synchronized real-time analytics, the system moves beyond traditional communication platforms and provides a more intelligent understanding of human interactions.
+
