@@ -1,5 +1,5 @@
 # Real-Time Multilingual Emotion Detection & Distributed Communication System
-# Overview
+## Overview
 
 Modern communication platforms allow users to exchange messages and video streams, but they are unable to understand the emotional context behind conversations. A user may be happy, frustrated, stressed, sarcastic, or confused, yet traditional chat systems treat every message as plain text.
 
