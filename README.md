@@ -238,9 +238,8 @@ Cloud deployment
 Advanced emotional analytics
 Federated learning integration
 End-to-end encrypted communication
-Team Members
 
-
+# Team Members
 
 Sankalp Gupta
 AI/ML Development, Transformer Modification, Backend Integration
@@ -251,7 +250,7 @@ Frontend Development, Dashboard Design, Synchronization
 Pranshu Yadav
 Facial Emotion Recognition, CNN Integration, Webcam Processing
 
-## Conclusion
+# Conclusion
 
 This project presents a practical implementation of an emotion-aware distributed communication platform that combines Natural Language Processing and Computer Vision techniques.
 
