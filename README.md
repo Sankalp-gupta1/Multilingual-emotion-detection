@@ -1,146 +1,85 @@
-# Real-Time Multilingual Emotion Detection & Privacy-Preserving Distributed Chat System
+Real-Time Multilingual Emotion Detection & Distributed Communication System
+Overview
 
-A real-time AI-based communication platform that detects emotions from multilingual chat messages and facial expressions.  
-The system combines NLP, Computer Vision, Transformer-based emotion detection, CNN facial emotion recognition, FastAPI backend, Streamlit frontend, and distributed synchronization.
+Modern communication platforms allow users to exchange messages and video streams, but they are unable to understand the emotional context behind conversations. A user may be happy, frustrated, stressed, sarcastic, or confused, yet traditional chat systems treat every message as plain text.
 
----
+To address this limitation, we developed a real-time multilingual emotion detection and distributed communication platform capable of analyzing both textual and facial emotions. The system combines Natural Language Processing (NLP), Computer Vision, and Deep Learning techniques to provide live emotional insights during communication.
 
-## Project Overview
+The platform supports multiple connected users, real-time chat, facial emotion recognition through webcam input, sarcasm detection, and synchronized emotional analytics through an interactive dashboard.
 
-This project is designed to make online communication more emotion-aware.
+Problem Statement
 
-Normal chat systems only transfer messages, but they do not understand whether a user is happy, sad, angry, confused, or sarcastic.  
-This system analyzes both:
+Most existing communication systems focus only on message delivery and do not understand user emotions.
 
-- Text messages
-- Facial expressions through webcam
+Some systems perform text analysis while others focus on facial recognition, but very few combine both approaches into a single platform. In addition, traditional systems face challenges such as:
 
-and displays live emotional analytics in a distributed multi-user dashboard.
+Lack of real-time emotion understanding
+No sarcasm detection capability
+Limited multilingual support
+No synchronized emotional analytics
+Webcam conflicts in multi-user environments
+Lack of privacy-aware monitoring
 
----
+These limitations reduce the ability of communication platforms to understand human behavior and emotional context.
 
-## Key Highlight
+Proposed Solution
 
-The main technical highlight of this project is the use of a Transformer-based multilingual emotion detection model with Cosine Similarity Attention.
+The proposed system integrates multilingual text emotion detection and facial emotion recognition into a single distributed platform.
 
-Instead of relying only on traditional dot-product based attention, the system uses cosine similarity logic to improve semantic understanding between multilingual sentences.
+The system continuously analyzes user messages and facial expressions to generate emotional insights in real time. These predictions are synchronized across connected users and visualized through a live analytics dashboard.
+
+Key capabilities include:
+
+Real-time multilingual emotion detection
+Sarcasm identification
+Facial emotion recognition
+Distributed synchronization
+Shared camera management
+Live emotional analytics
+Privacy-preserving communication
+Key Innovation
+
+A major contribution of this project is the modification of the traditional Transformer attention mechanism.
+
+Traditional Transformer models use Dot-Product Attention for semantic comparison between vectors. In this project, Cosine Similarity Attention was introduced to improve multilingual semantic understanding.
+
+Instead of focusing primarily on vector magnitude, cosine similarity measures the directional relationship between vectors, helping the model better understand similar meanings expressed in different languages.
+
+For example:
+
+"I am happy"
+"Main khush hu"
+
+Although the words are different, both sentences express similar emotions. Cosine similarity helps bring such semantically related sentences closer during prediction.
+
+System Features
+Text Emotion Detection
+
+The NLP module analyzes user messages and predicts emotions such as:
+
+Joy
+Sadness
+Anger
+Fear
+Love
+Surprise
+Neutral
+Sarcasm Detection
+
+The system identifies sarcastic messages that may otherwise be misunderstood by conventional sentiment analysis models.
 
 Example:
 
+Wow, great! I failed my exam.
 
-Features
-Real-time multilingual text emotion detection
-Sarcasm detection from chat messages
-Facial emotion recognition using webcam
-CNN-based face emotion prediction
-Transformer-based NLP emotion module
-Cosine Similarity Attention mechanism
-FastAPI backend for AI model serving
-Streamlit frontend dashboard
-Multi-user distributed chat system
-Shared camera synchronization
-Privacy-preserving webcam access
-Live emotional analytics dashboard
-JSON-based synchronization
-Real-time user tracking
-Tech Stack
-Technology	Purpose
-Python	Core programming language
-Streamlit	Frontend dashboard
-FastAPI	Backend API communication
-XLM-RoBERTa	Multilingual text emotion model
-Transformer	Text understanding
-Cosine Similarity	Semantic attention comparison
-CNN	Facial emotion recognition
-OpenCV	Webcam and face detection
-TensorFlow / Keras	Deep learning model execution
-PyTorch	Transformer model support
-JSON	Multi-user synchronization
-NumPy / Pandas	Data processing
-System Architecture
-User Input
-   |
-   |-- Text Message
-   |-- Webcam Frame
-   |
-Streamlit Frontend
-   |
-FastAPI Backend
-   |
-   |-- Transformer NLP Model
-   |      |-- Emotion Detection
-   |      |-- Sarcasm Detection
-   |
-   |-- CNN Facial Emotion Model
-          |-- Face Detection
-          |-- Facial Emotion Prediction
-   |
-Synchronization Layer
-   |
-Live Dashboard + Multi-User Analytics
-Internal Workflow
-User sends a message or activates webcam.
-Streamlit frontend sends data to FastAPI backend.
-Text messages are processed by the Transformer NLP model.
-Webcam frames are processed using OpenCV and CNN.
-Emotion predictions are generated in real time.
-Backend synchronizes results across connected users.
-Dashboard displays live emotional analytics.
-Text Emotion Detection Module
+Although positive words are used, the actual emotional meaning is negative.
 
-The text emotion module analyzes chat messages and predicts emotional meaning.
+Facial Emotion Recognition
 
-Working Steps
-User Message
-   ↓
-Text Preprocessing
-   ↓
-Tokenization
-   ↓
-Transformer Model
-   ↓
-Cosine Similarity Attention
-   ↓
-Emotion Prediction
-Output Emotions
-Joy
-Anger
-Sadness
-Fear
-Love
-Neutral
-Surprise
-Cosine Transformer Attention
+A CNN-based facial emotion recognition model processes webcam frames and predicts facial emotions in real time.
 
-Traditional Transformer models use dot-product attention.
+Supported facial emotions include:
 
-In this project, cosine similarity is used to compare semantic meaning between vectors.
-
-Formula
-Cosine(Q, K) = (Q · K) / (||Q|| × ||K||)
-Why Cosine Similarity?
-Better multilingual meaning comparison
-Handles Hindi-English mixed text
-Helps similar meaning sentences stay closer
-Improves sarcasm and emotional context understanding
-Reduces dependency on vector magnitude
-Facial Emotion Detection Module
-
-The facial emotion module detects emotions from webcam input.
-
-Working Steps
-Webcam Frame
-   ↓
-OpenCV Face Detection
-   ↓
-Face Crop & Resize
-   ↓
-CNN Model
-   ↓
-Facial Emotion Prediction
-   ↓
-Dashboard Display
-Facial Emotion Classes
 Happy
 Sad
 Angry
@@ -148,259 +87,142 @@ Fear
 Neutral
 Surprise
 Disgust
-Privacy-Preserving Shared Camera System
+Distributed Multi-User Communication
 
-A major feature of this project is shared camera synchronization.
+Multiple users can connect simultaneously through different devices or browsers and participate in synchronized communication.
 
-Problem
+Privacy-Preserving Shared Camera
 
-If multiple users try to access the webcam at the same time, hardware conflict can occur.
+To prevent webcam conflicts, only one authenticated user is granted direct camera access while other users receive synchronized video updates.
 
-Solution
-Only one authenticated user gets direct camera access.
-Other users receive synchronized shared video stream.
-Backend controls camera allocation.
-Emotional analytics are shared without giving direct camera access to all users.
-Benefits
-Prevents webcam conflict
-Improves privacy
-Supports multi-user monitoring
-Keeps synchronization stable
-Model Training
-Text Emotion Model
-Dataset collected from Hugging Face
-Transformer model used for multilingual text understanding
-Emotion and sarcasm datasets used
-Text preprocessing performed before training
-Facial Emotion Model
-Dataset collected from Kaggle facial emotion datasets
-CNN model trained on facial expression images
-Image preprocessing included resizing, normalization, and face extraction
-Results
-Module	Approximate Performance
-Text Emotion Detection	78%
-Sarcasm Detection	Around 80%
-Facial Emotion Detection	Around 62%
+This approach improves both privacy and resource management.
 
-Facial emotion accuracy is comparatively lower because real-time webcam prediction depends on:
+Real-Time Analytics Dashboard
 
-Lighting condition
-Face angle
-Camera quality
-Live movement
-Expression clarity
-Project Folder Structure
-emotion-detection-whatsap/
-│
-├── chat_client/
-├── chat_server/
-├── data/
-├── facial_emotion/
-│   └── face_model/
-│       └── face_emotion_model_v2.keras
-│
-├── model_service/
-│   ├── fastapi_model_service.py
-│   ├── models/
-│   └── saved_emotion_model/
-│
-├── web_ui/
-│   ├── app.py
-│   ├── webcam.py
-│   ├── camera_manager.py
-│   ├── global_chat.json
-│   ├── online_users.json
-│   ├── shared_camera.jpg
-│   └── shared_emotion.json
-│
-├── requirements.txt
-└── README.md
-Installation
-1. Clone the Repository
-git clone https://github.com/your-username/your-repository-name.git
-cd emotion-detection-whatsap
-2. Create Virtual Environment
-python -m venv clean_env
-3. Activate Environment
+The Streamlit dashboard continuously displays:
 
-For Windows:
-
-.\clean_env\Scripts\activate
-
-If PowerShell gives execution policy error:
-
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\clean_env\Scripts\activate
-Install Dependencies
-python -m pip install --upgrade pip
-python -m pip install streamlit fastapi uvicorn transformers tensorflow keras opencv-python numpy pandas scikit-learn torch torchvision torchaudio pillow requests python-multipart sentencepiece tiktoken
-Run the Project
-Terminal 1: Run FastAPI Backend
-cd model_service
-python -m uvicorn fastapi_model_service:app --reload --host 0.0.0.0 --port 8000
-
-Backend will run on:
-
-http://127.0.0.1:8000
-Terminal 2: Run Streamlit Frontend
-cd web_ui
-streamlit run app.py --server.address 0.0.0.0
-
-Frontend will run on:
-
-http://localhost:8501
-
-For mobile access on same WiFi, use:
-
-http://YOUR_IPV4_ADDRESS:8501
-
-Example:
-
-http://192.168.29.223:8501
-How to Find IPv4 Address
-
-Run:
-
-ipconfig
-
-Use the IPv4 address shown under Wi-Fi adapter.
-
-Example:
-
-IPv4 Address: 192.168.29.223
-
-Then open on mobile:
-
-http://192.168.29.223:8501
-Important Firewall Note
-
-If mobile device cannot open the Streamlit URL, allow port 8501 and 8000 in firewall.
-
-Temporary testing command:
-
-netsh advfirewall set allprofiles state off
-
-Turn firewall back on after testing:
-
-netsh advfirewall set allprofiles state on
-API Flow
-Frontend Request
-   ↓
-FastAPI Endpoint
-   ↓
-AI Model Processing
-   ↓
-JSON Response
-   ↓
-Streamlit Dashboard Update
-
-Example API use:
-
-User Message → FastAPI → Transformer Model → Emotion Result → Frontend
-Main Modules
-1. Frontend Module
-
-Built using Streamlit.
-
-Handles:
-
-User interface
-Chat input
-Webcam display
-Emotion dashboard
-Live analytics
-2. Backend Module
-
-Built using FastAPI.
-
-Handles:
-
-API requests
-AI model loading
-Emotion prediction
-Synchronization response
-3. NLP Module
-
-Uses Transformer model.
-
-Handles:
-
-Multilingual emotion detection
-Sarcasm detection
-Cosine similarity based semantic comparison
-4. Facial Emotion Module
-
-Uses CNN and OpenCV.
-
-Handles:
-
-Webcam frame capture
-Face detection
-Emotion classification
-5. Synchronization Module
-
-Uses JSON storage.
-
-Handles:
-
-Online users
-Shared chat
-Shared webcam frame
-Emotion analytics
+Active users
+Message statistics
+Detected emotions
+Facial emotion predictions
 Camera status
+Live analytics
+Technology Stack
+Technology	Purpose
+Python	Core development
+Streamlit	Frontend dashboard
+FastAPI	Backend APIs
+XLM-RoBERTa	Multilingual NLP
+Transformer	Text understanding
+Cosine Similarity Attention	Semantic comparison
+PyTorch	NLP model execution
+TensorFlow / Keras	Facial emotion model
+CNN	Facial emotion recognition
+OpenCV	Webcam processing
+JSON	Synchronization
+NumPy & Pandas	Data handling
+System Architecture
+Users
+   │
+   ▼
+Streamlit Frontend
+   │
+   ▼
+FastAPI Backend
+   │
+   ├── NLP Module
+   │      ├─ Emotion Detection
+   │      └─ Sarcasm Detection
+   │
+   ├── CNN Facial Emotion Module
+   │      └─ Webcam Analysis
+   │
+   ▼
+Synchronization Layer
+   │
+   ▼
+Live Analytics Dashboard
+Workflow
+Users connect through the distributed communication platform.
+Messages and webcam frames are received in real time.
+Text messages are processed by the Transformer-based NLP model.
+Webcam frames are processed using OpenCV and CNN.
+Emotion predictions are generated.
+Results are synchronized across connected users.
+Dashboard displays real-time emotional analytics.
+Datasets Used
+Text Emotion Dataset
+
+The multilingual emotion dataset was collected from publicly available Hugging Face resources and emotion classification datasets.
+
+Sarcasm Dataset
+
+Sarcasm detection data was collected from publicly available irony and sarcasm datasets.
+
+Facial Emotion Dataset
+
+Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
+
+Model Training
+NLP Model
+
+The text emotion module was developed using XLM-RoBERTa and trained on multilingual emotion datasets.
+
+The model was fine-tuned to identify emotional context from multilingual conversations and sarcasm-rich text.
+
+Facial Emotion Model
+
+The facial emotion recognition model was trained using CNN architecture on facial expression datasets.
+
+Images were preprocessed through resizing, normalization, and augmentation before training.
+
+Results
+
+The system successfully performs:
+
+Real-time emotion detection
+Sarcasm detection
+Facial emotion recognition
+Multi-user synchronization
+Live emotional analytics
+
+The platform demonstrates stable performance in distributed communication environments and provides meaningful emotional insights during conversations.
+
 Applications
+
+This project can be used in:
+
 Online interview monitoring
-Smart classrooms
-Emotion-aware chat systems
-AI-based customer support
-Mental health monitoring
+Smart classroom environments
+Mental health support systems
+Customer behavior analysis
+Emotion-aware chat platforms
+AI-assisted communication systems
 Virtual meeting analytics
-Human-computer interaction research
-AI surveillance and monitoring systems
-Future Enhancements
-Voice emotion detection
+Future Scope
+
+Future improvements may include:
+
+Voice emotion recognition
 Speech tone analysis
 Mobile application support
 Cloud deployment
-GPU acceleration
-Federated learning
-Advanced analytics dashboard
-Encrypted communication
-Biometric authentication
-AI-based recommendation system
-Challenges Faced
-Real-time webcam synchronization
-Multi-user shared camera control
-CPU-based processing limitations
-Facial emotion prediction under low lighting
-API response handling
-Frontend-backend synchronization
-Model compatibility issues during deployment
+Advanced emotional analytics
+Federated learning integration
+End-to-end encrypted communication
 Team Members
-Sankalp Gupta
-Suryansh Sharma
-Pranshu Yadav
-Guide
 
-Er. Shesh Mani Tiwari
-Department of Computer Science
-CSJM University, Kanpur
+Sankalp Gupta
+AI/ML Development, Transformer Modification, Backend Integration
+
+Suryansh Sharma
+Frontend Development, Dashboard Design, Synchronization
+
+Pranshu Yadav
+Facial Emotion Recognition, CNN Integration, Webcam Processing
 
 Conclusion
 
-This project demonstrates a real-time emotion-aware distributed communication system that combines NLP, Computer Vision, Deep Learning, and synchronization techniques.
+This project presents a practical implementation of an emotion-aware distributed communication platform that combines Natural Language Processing and Computer Vision techniques.
 
-The system can detect emotions from both text and facial expressions, synchronize results across multiple users, and display live emotional analytics through an interactive dashboard.
-
-It provides a practical foundation for future intelligent communication systems where emotional understanding plays an important role.
-
-License
-
-This project is developed for academic and learning purposes.
-
-
-
-```text
-
-I am happy
-Main khush hu
+By integrating multilingual emotion detection, sarcasm recognition, facial emotion analysis, and synchronized real-time analytics, the system moves beyond traditional communication platforms and provides a more intelligent understanding of human interactions.
