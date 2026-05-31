@@ -121,7 +121,9 @@ CNN	Facial emotion recognition
 OpenCV	Webcam processing
 JSON	Synchronization
 NumPy & Pandas	Data handling
-### System Architecture
+## System Architecture
+
+```text
 Users
    │
    ▼
@@ -131,16 +133,17 @@ Streamlit Frontend
 FastAPI Backend
    │
    ├── NLP Module
-   │      ├─ Emotion Detection
-   │      └─ Sarcasm Detection
+   │     ├── Emotion Detection
+   │     └── Sarcasm Detection
    │
    ├── CNN Facial Emotion Module
-   │      └─ Webcam Analysis
+   │     └── Webcam Analysis
+   │
+   ├── Synchronization Layer
    │
    ▼
-Synchronization Layer
-   │
-   ▼
+Live Analytics Dashboard
+```
 ## Live Analytics Dashboard
 Workflow
 Users connect through the distributed communication platform.
