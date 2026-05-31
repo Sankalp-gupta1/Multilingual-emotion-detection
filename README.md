@@ -194,13 +194,13 @@ The text emotion module was developed using XLM-RoBERTa and trained on multiling
 
 The model was fine-tuned to identify emotional context from multilingual conversations and sarcasm-rich text.
 
-## Facial Emotion Model
+# Facial Emotion Model
 
 The facial emotion recognition model was trained using CNN architecture on facial expression datasets.
 
 Images were preprocessed through resizing, normalization, and augmentation before training.
 
-## Results
+# Results
 
 The system successfully performs:
 
@@ -212,7 +212,7 @@ Live emotional analytics
 
 The platform demonstrates stable performance in distributed communication environments and provides meaningful emotional insights during conversations.
 
-## Applications
+# Applications
 
 This project can be used in:
 
@@ -229,7 +229,7 @@ Future Scope
 
 
 
-## Future improvements may include:
+# Future improvements may include:
 
 Voice emotion recognition
 Speech tone analysis
