@@ -31,7 +31,7 @@ The proposed system integrates multilingual text emotion detection and facial em
 
 The system continuously analyzes user messages and facial expressions to generate emotional insights in real time. These predictions are synchronized across connected users and visualized through a live analytics dashboard.
 
-# Key capabilities include:
+## Key capabilities include:
 
 Real-time multilingual emotion detection
 Sarcasm identification
@@ -154,7 +154,7 @@ Live Analytics Dashboard
 <img width="856" height="574" alt="image" src="https://github.com/user-attachments/assets/f58ba51f-d791-48fb-9763-59a499912f69" />
 
 ## Live Analytics Dashboard
-Workflow
+## Workflow
 Users connect through the distributed communication platform.
 Messages and webcam frames are received in real time.
 Text messages are processed by the Transformer-based NLP model.
@@ -171,24 +171,24 @@ Dashboard displays real-time emotional analytics.
 
 
 
-## Datasets Used
+# Datasets Used
 
-# Text Emotion Dataset
+## Text Emotion Dataset
 
 The multilingual emotion dataset was collected from publicly available Hugging Face resources and emotion classification datasets.
 
-# Sarcasm Dataset
+## Sarcasm Dataset
 
  Sarcasm detection data was collected from publicly available irony and sarcasm datasets.
 
-# Facial Emotion Dataset
+## Facial Emotion Dataset
 
  Facial emotion datasets were collected from Kaggle sources containing thousands of facial expression images across multiple emotion classes.
  <img width="1137" height="1005" alt="image" src="https://github.com/user-attachments/assets/ad369e12-8a26-4356-a5db-ab0f956cd497" />
 
 
-### Model Training
-# NLP Model
+## Model Training
+### NLP Model
 
 The text emotion module was developed using XLM-RoBERTa and trained on multilingual emotion datasets.
 
