@@ -1,4 +1,33 @@
-# Real-Time Multilingual Emotion Detection & Distributed Communication System
+# Real-Time Multilingual Emotion Detection and Distributed Chat
+
+## Live app
+
+**https://multilingual-emotion-demo.vercel.app/**
+
+A public multimodal demo is now available in `web/`.
+
+Hosted mode includes:
+- English/Hindi/Hinglish text-signal analysis,
+- transparent per-class text scores,
+- optional webcam facial-expression model signal using face-api.js,
+- side-by-side text and expression signals,
+- clear separation between model output and a person's actual emotional state.
+
+The original Python distributed-chat, camera-manager, text-model, sarcasm and face-service code remains in the repository.
+
+### Privacy note
+
+The browser demo processes webcam frames in the page and does not intentionally upload camera frames to this application.
+
+### Run locally
+
+```bash
+cd web
+python -m http.server 8000
+```
+
+---
+
 ## Overview
 
 Modern communication platforms allow users to exchange messages and video streams, but they are unable to understand the emotional context behind conversations. A user may be happy, frustrated, stressed, sarcastic, or confused, yet traditional chat systems treat every message as plain text.
